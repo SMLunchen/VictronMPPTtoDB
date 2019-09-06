@@ -132,11 +132,13 @@ def run():
             IPho = float(PPV)/float(VPV)
 			#calculate load wattage
             WL = float(V)*float(IL)
+			#calculate Battery wattage
+            BL = float(V)*float(I)
 			
 			#build insertstring
-            query = "INSERT INTO stats (Timestamp, VBat, IBat, VPho, IPho, WPho, IL, WL) VALUES (NOW(), '"+str(V)+"', '"+str(I)+"', '"+str(VPV)+"', '"+str(IPho)+"', '"+str(PPV)+"', '"+str(IL)+"', '"+str(WL)+"')"
+            query = "INSERT INTO stats (Timestamp, VBat, IBat, WBat, VPho, IPho, WPho, IL, WL, CS) VALUES (NOW(), '"+str(V)+"', '"+str(I)+"', '"+str(BL)+"', '"+str(VPV)+"', '"+str(IPho)+"', '"+str(PPV)+"', '"+str(IL)+"', '"+str(WL)+"', '"+str(CS)+"')"
             #write to db
-			sqlConnect.Execute(query)
+            sqlConnect.Execute(query)
 
 
 
