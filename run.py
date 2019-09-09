@@ -136,7 +136,7 @@ def run():
             BL = float(V)*float(I)
 			
 			#build insertstring
-            query = "INSERT INTO stats (Timestamp, VBat, IBat, WBat, VPho, IPho, WPho, IL, WL, CS) VALUES (NOW(), '"+str(V)+"', '"+str(I)+"', '"+str(BL)+"', '"+str(VPV)+"', '"+str(IPho)+"', '"+str(PPV)+"', '"+str(IL)+"', '"+str(WL)+"', '"+str(CS)+"')"
+            query = "INSERT INTO stats (Timestamp, VBat, IBat, WBat, VPho, IPho, WPho, IL, WL, CS) VALUES (UNIX_TIMESTAMP(NOW()), '"+str(V)+"', '"+str(I)+"', '"+str(BL)+"', '"+str(VPV)+"', '"+str(IPho)+"', '"+str(PPV)+"', '"+str(IL)+"', '"+str(WL)+"', '"+str(CS)+"')"
             #write to db
             sqlConnect.Execute(query)
 
