@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 #define Datasources
 DS_VBAT="sql//mysql/host=127.0.0.1/dbname=solarstats/username=root/password=pass//stats/Timestamp/VBat/1"
 DS_IBAT="sql//mysql/host=127.0.0.1/dbname=solarstats/username=root/password=pass//stats/Timestamp/IBat/1"
