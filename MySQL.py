@@ -10,7 +10,7 @@ class MySQL(object):
     def __init__(self):
 
         database = "solarstats"
-        password = "password"
+        password = "pass"
         host = "127.0.0.1"
         user = "root"
 
